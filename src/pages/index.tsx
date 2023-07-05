@@ -5,27 +5,27 @@ import {
   Center,
   Heading,
   Highlight,
+  Image,
   List,
   ListItem,
   Text,
   useColorMode,
-  Code,
   Button,
   calc,
-  CodeProps,
-  Link as ChakraLink,
   Divider,
   Flex,
 } from "@chakra-ui/react";
 
+import hammerAndSickle from "../images/hs.gif";
+import EmojiListIcon from "../components/EmojiListIcon";
+
 const $lineHeight = "1.4375rem";
 
-const PurpleCode = (props: CodeProps) => (
-  <Code colorScheme="purple" {...props} />
-);
+export const Head: HeadFC = () => <title>Home Page</title>;
 
-const IndexPage: React.FC<PageProps> = () => {
+export default function IndexPage(props: PageProps) {
   const { toggleColorMode } = useColorMode();
+
   return (
     <Box as="main">
       <Center height="100vh" textAlign="center">
@@ -37,41 +37,42 @@ const IndexPage: React.FC<PageProps> = () => {
             lineHeight={calc($lineHeight).multiply(4).toString()}
           >
             <Highlight
-              query="With Speed"
+              query="-"
               styles={{ color: "purple.600", _dark: { color: "purple.400" } }}
             >
-              Get Started Using Gatsby With Speed
+              Samuel Zislis-Gaus
             </Highlight>
           </Heading>
           <Text fontSize="2xl" mb={$lineHeight}>
-            Thank you for using the Gatsby Starter for{" "}
-            <PurpleCode fontSize="initial">Chakra UI</PurpleCode>!
+            Original inventor of "software"
           </Text>
           <List textAlign="start" spacing={4}>
             <ListItem>
-              ⚡Create accessible Gatsby apps with speed using Chakra UI
+              <EmojiListIcon emoji="💻" />
+              Solves problems with technology
             </ListItem>
             <ListItem>
-              ⚡Generate types from your custom component with the Chakra CLI
-              for IDE autocompletion
+              <EmojiListIcon emoji="🤵‍♂️" />
+              Wife guy
+            </ListItem>
+            <ListItem>
+              <EmojiListIcon emoji="👨‍👧" />
+              DILF
+            </ListItem>
+            <ListItem>
+              <EmojiListIcon emoji="🕎" />
+              ייִדישיסט
+            </ListItem>
+            <ListItem>
+              <EmojiListIcon
+                emoji={
+                  <Image width="1em" display="inline" src={hammerAndSickle} />
+                }
+              />
+              Believes workers are entitled to the full value their labour
+              produces
             </ListItem>
           </List>
-          <Text>
-            To generate the theming token types, run{" "}
-            <PurpleCode>npm run theme</PurpleCode> or{" "}
-            <PurpleCode>npm run theme:watch</PurpleCode>
-          </Text>
-          <Text>
-            Head over to{" "}
-            <ChakraLink
-              href="https://chakra-ui.com"
-              color="blue.500"
-              fontWeight="bold"
-            >
-              ChakraUI.com
-            </ChakraLink>{" "}
-            to get started using the components and creating your theme!
-          </Text>
           <Divider />
           <Button
             onClick={toggleColorMode}
@@ -86,6 +87,3 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
-export default IndexPage;
-
-export const Head: HeadFC = () => <title>Home Page</title>;

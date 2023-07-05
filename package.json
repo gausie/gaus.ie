@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-chakra-ui-type-script",
+  "name": "gaus.ie",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-starter-chakra-ui-type-script",
-  "author": "tylerapfledderer",
+  "description": "Sam's personal website",
   "keywords": [
     "gatsby"
   ],
@@ -15,8 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "theme": "chakra-cli tokens path/to/theme.ts",
-    "theme:watch": "chakra-cli tokens path/to/theme.ts --watch"
+    "theme": "chakra-cli tokens src/theme.ts",
+    "theme:watch": "chakra-cli tokens src/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^3.1.1",
