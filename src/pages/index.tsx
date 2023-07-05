@@ -57,7 +57,7 @@ export default function IndexPage(props: PageProps) {
             </ListItem>
             <ListItem>
               <EmojiListIcon emoji="👨‍👧" />
-              DILF
+              D.I.L.F.
             </ListItem>
             <ListItem>
               <EmojiListIcon emoji="🕎" />

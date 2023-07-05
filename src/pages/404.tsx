@@ -26,7 +26,7 @@ const jokes = [
 ] as const;
 
 export default function NotFound() {
-  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+  const joke = React.useMemo(() => jokes[Math.floor(Math.random() * jokes.length)], undefined);
 
   return (
     <Stack
