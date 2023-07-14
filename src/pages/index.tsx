@@ -1,7 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import {
-  Box,
   Center,
   Heading,
   Highlight,
@@ -14,6 +13,7 @@ import {
   calc,
   Divider,
   Flex,
+  Container,
 } from "@chakra-ui/react";
 
 import hammerAndSickle from "../images/hs.gif";
@@ -21,13 +21,13 @@ import EmojiListIcon from "../components/EmojiListIcon";
 
 const $lineHeight = "1.4375rem";
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>welcome to gaus.ie</title>;
 
 export default function IndexPage(props: PageProps) {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <Box as="main">
+    <Container maxWidth="container.large">
       <Center height="100vh" textAlign="center">
         <Flex gap={$lineHeight} flexDir="column">
           <Heading
@@ -83,7 +83,7 @@ export default function IndexPage(props: PageProps) {
           </Button>
         </Flex>
       </Center>
-    </Box>
+    </Container>
   );
 };
 
